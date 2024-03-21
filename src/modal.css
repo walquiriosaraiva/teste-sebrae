@@ -1,0 +1,72 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .close-button {
+    float: right;
+    border: none;
+    padding: 5px 8px; /* Padding menor para um botão menor */
+    margin: 5px; /* Espaço ao redor do botão */
+    font-weight: bold; /* Deixa o 'X' mais destacado */
+    background: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #ff4545; /* Vermelho claro para visibilidade */
+    color: #5f5959; /* Texto branco para contraste */
+  }
+
+  .close-button:hover {
+    background-color: #ff2e2e; /* Vermelho um pouco mais escuro no hover */
+  }
+
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%; /* Torna a modal mais larga */
+    max-width: 600px; /* Define uma largura máxima */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Organiza os filhos da modal em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+  
+  /* Estilização para labels e inputs dentro da modal */
+  .modal label {
+    width: 100%; /* Faz com que o label ocupe toda a largura da modal */
+    margin-top: 10px; /* Adiciona um espaçamento no topo */
+  }
+  
+  .modal input, .modal textarea {
+    width: 100%; /* Faz com que o input e textarea ocupem toda a largura */
+    padding: 8px; /* Adiciona um pouco de padding para ficar mais fácil de interagir */
+    margin-top: 5px; /* Espaço entre o label e o input/textarea */
+    border: 1px solid #ccc; /* Borda sutil */
+    border-radius: 4px; /* Bordas arredondadas */
+  }
+  
+  /* Estilização específica para o botão de fechar a modal, se necessário */
+  .close-button {
+    align-self: flex-end; /* Alinha o botão de fechar à direita */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
