@@ -1,0 +1,45 @@
+
+.buscar-cep {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buscar-cep form {
+    margin-bottom: 20px;
+  }
+  
+  .buscar-cep input {
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .buscar-cep button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buscar-cep button:hover {
+    background-color: #0056b3;
+  }
+  
+  .endereco p {
+    margin: 5px 0;
+  }
+  
+  .erro {
+    color: red;
+  }
+  
+  .button-cep {
+    margin-left: 2px;
+  }
+  
