@@ -2,8 +2,8 @@ import React from 'react';
 import './modal.css';
 
 export default function ContaModal({ isVisible, onClose, children }) {
-  if (!isVisible) return null;
   
+  if (!isVisible) return null;
 
   return (
     <div className="modal-overlay">

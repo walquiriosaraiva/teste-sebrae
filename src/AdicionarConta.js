@@ -1,28 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './conta.css';
 
-export default function AdicionarConta({ onContaAdded }) {
+export default function AdicionarConta({ conta, contaAdicionada, fechar }) {
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
+
+  useEffect(() => {
+    if (conta) {
+      setNome(conta.nome);
+      setDescricao(conta.descricao);
+    }
+  }, [conta]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post('http://localhost:3333/Conta', {
-        nome,
-        descricao
-      });
+    const url = 'http://localhost:3333/Conta' + (conta ? `/${conta.id}` : '');
+    const method = conta ? 'put' : 'post';
 
-      console.log('Conta adicionada:', response.data);
-      setNome('');
-      setDescricao('');
-      alert('Conta adicionada com sucesso!');
-      onContaAdded();
+    try {
+      await axios({ method, url, data: { nome, descricao } });
+      alert('Conta ' + (conta ? 'atualizada' : 'adicionada') + ' com sucesso!');
+      contaAdicionada();
+      fechar();
     } catch (error) {
-      console.error('Erro ao adicionar conta:', error);
-      alert('Erro ao adicionar conta. Por favor, tente novamente.');
+      console.error('Erro ao ' + (conta ? 'atualizar' : 'adicionar') + ' conta:', error);
     }
   };
 

@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Estutura de arquivos e pastas criadas
+A estrutura de arquivos e pastas criadas foi para fazer o mais breve possível a aplicação, mais o recomendável seria separar em componentes, exemplo:
+pasta: components e arquivo teria todos meus componentes de modal, cadastro, lista
+
+## Adicionado um dockerfile
+```bash
+docker build -t teste-sebrae . 
+```
+
+```bash
+docker run -p 80:80 teste-sebrae
+```

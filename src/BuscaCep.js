@@ -22,15 +22,14 @@ export default function BuscaCEP() {
   return (
     <div className='buscar-cep'>
       <form onSubmit={buscarCep}>
-        <label>
-          CEP:
-          <input 
-            type="text" 
-            value={cep} 
-            onChange={(e) => setCep(e.target.value)} 
-            placeholder="Insira o CEP" 
-          />
-        </label>
+        <label htmlFor="cep">CEP:</label>
+        <input 
+          id="cep"
+          type="text" 
+          value={cep} 
+          onChange={(e) => setCep(e.target.value)} 
+          placeholder="Insira o CEP" 
+        />        
         <button className='button-cep' type="submit">Buscar</button>
       </form>
 
