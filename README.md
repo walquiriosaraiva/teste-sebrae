@@ -73,6 +73,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 A estrutura de arquivos e pastas criadas foi para fazer o mais breve possível a aplicação, mais o recomendável seria separar em componentes, exemplo:
 pasta: components e arquivo teria todos meus componentes de modal, cadastro, lista
 
+## Subindo APIRestfull com json-server
+```bash
+npm run server
+```
+
 ## Adicionado um dockerfile
 ```bash
 docker build -t teste-sebrae . 
